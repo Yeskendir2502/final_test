@@ -2,17 +2,19 @@ import json
 import math
 import random
 import os
+import shutil
 from pathlib import Path
 
 import numpy as np
 from tqdm import tqdm
 
 from GA_BOHB.optimizer.optimizer import ConfigOptimizer
+from GA_BOHB.optimizer import logger
 from NSGA2.nsga2_core import run_nsga2
 from NSGA2.representation import decode_chromosome
 from rag_pipeline.pipeline import evaluate_config
 
-# hardcoded params (style inherited from just_example.py)
+
 MY_SEED = 42
 POP_COUNT = 12
 GENERATIONS = 4
@@ -21,12 +23,10 @@ CROSS_PROB = 0.9
 MUT_PROB = 0.15
 DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
-USE_DUMMY = False  # set False on the Linux server for real metrics
+USE_DUMMY = False
 WORKERS = 1
 BOHB_TRIALS = 30
 TIMING_LOG = Path("artifacts/timings.log")
-
-
 def eval_chromosome(chromosome, dataset, use_dummy, embed_models):
     cfg = flatten_cfg(decode_chromosome(chromosome))
     cfg["embedding_model"] = random.choice(embed_models)
@@ -88,8 +88,15 @@ def run_random(dataset: str):
 
 
 def run_bohb(dataset: str):
+    results_path = Path(logger.RESULTS_PATH)
+    results_dir = Path(logger.RESULTS_DIR)
+    results_dir.mkdir(parents=True, exist_ok=True)
+    if results_path.exists():
+        results_path.unlink()
     opt = ConfigOptimizer(dataset=dataset, use_dummy=USE_DUMMY)
     opt.run_bohb_optimize(trials=BOHB_TRIALS, dataset=dataset, use_dummy=USE_DUMMY)
+    dst = results_dir / f"BOHB_results_{dataset}.json"
+    shutil.copyfile(results_path, dst)
 
 
 def run_grid(dataset: str):
