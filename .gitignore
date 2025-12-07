@@ -1,0 +1,37 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+.env
+
+# Data and artifacts
+data/
+models/
+artifacts/
+
+# OS junk
+*.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor
+.idea/
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# FAISS indices / caches
+**/*.faiss
+**/*.npy
+
+# Local archives
+*.tar.gz
+*.zip
+

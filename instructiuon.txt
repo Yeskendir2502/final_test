@@ -1,0 +1,141 @@
+Write me a plan what are you going to do and do me the full scripts and etc with tests from you! IMPORTANT NO PLACE FOR ERROR!!
+
+BEIR https://eval.ai/web/challenges/challenge-page/1897/leaderboard/4475
+We take the FIQA, SciFact datasets
+Connect with GA on params limited to space
+CONFIG_SPACE = {
+    "splitter_type": ["token", "sentence", "paragraph"],
+    "chunk_size": [256, 384, 512],
+    "chunk_overlap": [0, 30, 50],
+    "embedding_model": ["all-MiniLM-L6-v2", "bge-base", "mpnet"],
+    "normalize_embeddings": [True, False],
+    "index_type": ["HNSW", "IVF", "Flat"],
+    "hnsw_M": [16, 24, 32],
+    "hnsw_efSearch": [50, 100, 150],
+    "top_k": [5, 10, 20, 50],
+    "hybrid_weight": [0.0, 0.5, 0.8, 1.0],
+}
+
+GA provides for example
+config = {
+    "splitter_type": ["token"],
+    "chunk_size": [256],
+    "chunk_overlap": [0],
+    "embedding_model": ["all-MiniLM-L6-v2"],
+    "normalize_embeddings": [True],
+    "index_type": ["HNSW"],
+    "hnsw_M": [24],
+    "hnsw_efSearch": [50],
+    "top_k": [5],
+    "hybrid_weight": [0.0],
+}
+
+And we need to design the working pipeline:
+Chunking + Embedding + Indexing + Retrieval pipeline
+
+then use the result of the nDCG@10 metric, config, latency and save it for the GA
+
+SOO, I expect you to write
+Main script in which we choose that dataset from 2, and choose the GA algo that my teammates developed (make sure they are correct and correct them if necessary) and choose the generation number and as well show the progress and remaining by using tqdm so that I can view how much is left. Then we launch it. It does the things above and saves the data + history from each generation in the format that we will be able to analyze later easily.
+
+
+
+
+
+
+HERE IS OUR OLD PROJECT PROPOSAL/PRESENTATION:
+
+SBSE for RAG Pipeline
+Optimization
+Team SOFTIKI
+What is RAG (Retrieval Augmented Generation)?
+The RAG Process: A Two-Stage Pipeline
+● This project exclusively optimizes Step 1:
+The Retrieval System. We do not modify
+or train the LLM.
+● The quality of the final answer is
+fundamentally limited by the relevance of
+the retrieved context.
+Project Goal:
+● To apply Search-Based Software
+Engineering (SBSE) to automatically find
+the optimal configuration for the retrieval
+system, maximizing its effectiveness and
+efficiency for specific documents
+Problem: Issues with Manual Configuration
+Combinatorial Explosion of Parameters
+● Optimizing a Retrieval-Augmented Generation (RAG) pipeline involves tuning over 10 interdependent parameters
+across chunking, indexing, and retrieval stages.
+Manual Tuning is Inefficient and Ineffective
+● Time-Consuming: Relies on slow, iterative trial-and-error.
+● Inconsistent: A configuration for one document set fails on another.
+● Sub-Optimal: Manual "guesswork" rarely finds the best performance trade-offs.
+The "Garbage In, Garbage Out" Principle
+● Poorly retrieved context directly leads to irrelevant, inaccurate, or "hallucinated" LLM responses, defeating the
+purpose of RAG.
+Configurable Parameters
+1. Chunking Stage (Content Preparation)
+● splitter_type (e.g., Recursive, Token-based)
+● chunk_size
+● chunk_overlap
+2. Embedding & Indexing Stage (Content Representation)
+● embedding_model (e.g., bge-base, all-MiniLM)
+● normalization (True/False)
+● ANN_index_type (e.g., HNSW, IVFFlat)
+● ANN_index_params (HNSW M, efSearch)
+3. Retrieval Stage (Content Retrieval)
+● top_k (Number of documents to retrieve)
+● BM25_hybrid_weight (Balance between keyword and semantic search)
+Our Solution: Automated Optimization via SBSE
+We will use a Multi-Objective Genetic Algorithm (NSGA-II) to systematically search for optimal RAG pipeline
+configurations.
+The Workflow:
+1. Encode: The full set of pipeline parameters (chunk_size, model, etc.) is represented as a single
+"chromosome."
+2. Initialize: A diverse population of random pipeline configurations ("chromosomes") is generated.
+3. Evaluate Fitness: Each configuration is tested against a benchmark to measure its performance on competing
+objectives (e.g., nDCG vs. Latency).
+4. Evolve: Using selection, crossover, and mutation, the algorithm iteratively improves the population over many
+generations, favoring high-performing configurations.
+5. Output: The final result is a Pareto Front - a set of optimal solutions representing the best possible trade-offs.
+Evaluation Methodology
+Our evaluation is based on a comparative analysis using the BEIR (Benchmarking Information Retrieval) framework
+to quantitatively measure the improvement provided by our SBSE approach.
+We will test our approach across three diverse BEIR datasets to ensure our solution is robust and generalizable across
+different domains:
+● SciFact (Dense, technical scientific text)
+● NFCorpus (General, natural language health queries)
+● FiQA-2018 (Domain-specific financial language
+1. For each dataset, we will run our SBSE algorithm to generate a Pareto front of optimal configurations.
+2. We will benchmark our baseline configuration on the same datasets.
+3. All evaluations will be orchestrated using the BEIR framework to compute standard metrics like nDCG@10 and
+Recall@100, ensuring fair and reproducible results.
+Our generated Pareto front must dominate the baseline, meaning we will find configurations that are simultaneously more
+effective (higher nDCG/Recall) and/or more efficient (lower Latency/Index Size) than the manually tuned baseline.
+Existing solutions
+Current Practice: Manual Grid Search & Intuition
+● Engineers manually define a small set of parameters to test.
+● Process is slow, non-exhaustive, and highly dependent on engineer experience.
+Alternative: Traditional AutoML Frameworks
+● Tools like Auto-sklearn or TPOT are powerful but designed for a different problem.
+● They focus on Hyperparameter Optimization (HPO) and Neural Architecture Search (NAS) for single ML models,
+not multi-stage data pipelines.
+The Critical Gap: No Integrated RAG Pipeline Optimization
+● Traditional AutoML doesn't understand RAG-specific components like chunking_strategy or
+vector_index_type.
+● The recent emergence of specialized tools like AutoRAG validates that this is a recognized and unsolved problem
+in the MLOps community.
+
+
+
+
+This is a solid, actionable plan. It moves you from "theory" to "executable code."
+
+However, your plan is not yet perfect. It is missing one critical optimization that will save you hours of waiting: conditional execution.
+
+🔍 The Flaw in the Plan
+Your config space splits parameters into Indexing Params (Chunking, Embedding, Index building) and Retrieval Params (top_k, hybrid_weight).
+
+The Problem: If the GA decides to change only top_k from 10 to 20, but keeps the chunk_size the same, your current plan would rebuild the entire index (which takes minutes).
+
+The Fix: Your script must check: "Did the chunking/indexing params change since the last run? No? Then reuse the existing vector store."
