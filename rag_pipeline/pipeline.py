@@ -165,12 +165,13 @@ class PipelineCache:
         self.base_dir = Path(base_dir)
         self.base_dir.mkdir(parents=True, exist_ok=True)
 
-    def _cache_path(self, dataset: str, config: Dict[str, Any]) -> Path:
+    def _cache_path(self, dataset: str, config: Dict[str, Any], use_dummy: bool) -> Path:
         key = _hash_from_config(config, CHUNK_KEYS + EMBED_KEYS + INDEX_KEYS)
-        return self.base_dir / dataset / key
+        mode = "dummy" if use_dummy else "real"
+        return self.base_dir / dataset / f"{key}_{mode}"
 
-    def load(self, dataset: str, config: Dict[str, Any]) -> CachedArtifacts | None:
-        path = self._cache_path(dataset, config)
+    def load(self, dataset: str, config: Dict[str, Any], use_dummy: bool) -> CachedArtifacts | None:
+        path = self._cache_path(dataset, config, use_dummy)
         meta_path = path / "meta.json"
         if not meta_path.exists():
             return None
@@ -178,7 +179,8 @@ class PipelineCache:
             _require(np, "numpy")
             with open(meta_path, "r", encoding="utf-8") as f:
                 meta = json.load(f)
-            if meta.get("config_hash") != _hash_from_config(config, CHUNK_KEYS + EMBED_KEYS + INDEX_KEYS):
+            expected_hash = f"{_hash_from_config(config, CHUNK_KEYS + EMBED_KEYS + INDEX_KEYS)}_{'dummy' if use_dummy else 'real'}"
+            if meta.get("config_hash") != expected_hash:
                 return None
             chunk_path = path / "chunks.json"
             emb_path = path / "embeddings.npy"
@@ -211,8 +213,9 @@ class PipelineCache:
         chunk_doc_ids: List[str],
         embeddings,
         index,
+        use_dummy: bool,
     ) -> None:
-        path = self._cache_path(dataset, config)
+        path = self._cache_path(dataset, config, use_dummy)
         path.mkdir(parents=True, exist_ok=True)
         _require(np, "numpy")
         with open(path / "chunks.json", "w", encoding="utf-8") as f:
@@ -224,7 +227,7 @@ class PipelineCache:
         with open(path / "meta.json", "w", encoding="utf-8") as f:
             json.dump(
                 {
-                    "config_hash": _hash_from_config(config, CHUNK_KEYS + EMBED_KEYS + INDEX_KEYS),
+                    "config_hash": f"{_hash_from_config(config, CHUNK_KEYS + EMBED_KEYS + INDEX_KEYS)}_{'dummy' if use_dummy else 'real'}",
                     "created_at": time.time(),
                 },
                 f,
@@ -377,7 +380,7 @@ class RAGEvaluator:
         index_sec = 0.0
 
         cache_hit = False
-        cached = self.cache.load(self.dataset, config)
+        cached = self.cache.load(self.dataset, config, self.use_dummy)
         if cached:
             chunk_texts = cached.chunk_texts
             chunk_doc_ids = cached.chunk_doc_ids
@@ -415,7 +418,7 @@ class RAGEvaluator:
                 t_start_index = time.time()
                 index = self._build_index(embeddings, config)
                 index_sec = time.time() - t_start_index
-            self.cache.save(self.dataset, config, chunk_texts, chunk_doc_ids, embeddings, index)
+            self.cache.save(self.dataset, config, chunk_texts, chunk_doc_ids, embeddings, index, self.use_dummy)
 
         start = time.time()
         # Encode queries
