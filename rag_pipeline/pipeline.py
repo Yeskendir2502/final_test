@@ -369,7 +369,12 @@ class RAGEvaluator:
             if key not in config:
                 raise ValueError(f"Missing config key '{key}'")
 
+        t0 = time.time()
         corpus, queries, qrels = self._load_dataset()
+        t_after_load = time.time()
+        chunk_sec = 0.0
+        embed_sec = 0.0
+        index_sec = 0.0
 
         cache_hit = False
         cached = self.cache.load(self.dataset, config)
@@ -380,9 +385,12 @@ class RAGEvaluator:
             index = cached.index
             cache_hit = True
             if index is None and not self.use_dummy:
+                t_start_index = time.time()
                 index = self._build_index(embeddings, config)
+                index_sec = time.time() - t_start_index
         else:
             # Chunk corpus
+            t_start_chunk = time.time()
             chunk_texts: List[str] = []
             chunk_doc_ids: List[str] = []
             for doc_id, doc in corpus.items():
@@ -396,14 +404,17 @@ class RAGEvaluator:
                 for c in chunks:
                     chunk_texts.append(c)
                     chunk_doc_ids.append(doc_id)
-
+            chunk_sec = time.time() - t_start_chunk
             if not chunk_texts:
                 raise ValueError("No chunks produced; check chunk_size and splitter settings.")
-
+            t_start_embed = time.time()
             embeddings = self._build_embeddings(chunk_texts, config)
+            embed_sec = time.time() - t_start_embed
             index = None
             if not self.use_dummy:
+                t_start_index = time.time()
                 index = self._build_index(embeddings, config)
+                index_sec = time.time() - t_start_index
             self.cache.save(self.dataset, config, chunk_texts, chunk_doc_ids, embeddings, index)
 
         start = time.time()
@@ -428,6 +439,8 @@ class RAGEvaluator:
             if config.get("normalize_embeddings", False):
                 query_vecs = _normalize(query_vecs)
 
+        query_sec = time.time() - start
+
         top_k = int(config.get("top_k", 10))
         top_k = max(1, min(top_k, len(chunk_texts)))
         if self.use_dummy:
@@ -438,12 +451,17 @@ class RAGEvaluator:
         else:
             dense_scores, dense_idxs = self._dense_search(index, query_vecs, top_k)
 
+        search_sec = time.time() - start
+
         bm25_scores = None
         hybrid_weight = float(config.get("hybrid_weight", 0.0))
         if hybrid_weight > 0.0:
+            t_bm = time.time()
             scorer = _build_bm25(chunk_texts)
             bm25_scores = [scorer(q) for q in queries.values()]
+            search_sec += time.time() - t_bm
 
+        t_agg = time.time()
         results = self._aggregate_results(
             query_ids=list(queries.keys()),
             bm25_scores=bm25_scores,
@@ -452,7 +470,11 @@ class RAGEvaluator:
             chunk_doc_ids=chunk_doc_ids,
             hybrid_weight=hybrid_weight,
         )
+        aggregate_sec = time.time() - t_agg
+        t_ndcg = time.time()
         ndcg = _ndcg_at_k(qrels, results, k=10)
+        ndcg_sec = time.time() - t_ndcg
+        total_sec = time.time() - t0
         latency_ms = (time.time() - start) * 1000.0
 
         return {
@@ -460,6 +482,14 @@ class RAGEvaluator:
             "latency_ms": latency_ms,
             "cache_hit": cache_hit,
             "n_chunks": len(chunk_texts),
+            "chunk_sec": chunk_sec,
+            "embed_sec": embed_sec,
+            "index_sec": index_sec,
+            "query_sec": query_sec,
+            "search_sec": search_sec,
+            "aggregate_sec": aggregate_sec,
+            "ndcg_sec": ndcg_sec,
+            "total_sec": total_sec,
         }
 
 

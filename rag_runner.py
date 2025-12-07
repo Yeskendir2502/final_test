@@ -23,12 +23,21 @@ DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
 USE_DUMMY = False  # set False on the Linux server for real metrics
 WORKERS = max(1, (os.cpu_count() or 1) - 1)
+TIMING_LOG = Path("artifacts/timings.log")
 
 
 def eval_chromosome(chromosome, dataset, use_dummy, embed_models):
     cfg = flatten_cfg(decode_chromosome(chromosome))
     cfg["embedding_model"] = random.choice(embed_models)
     res = evaluate_config(cfg, dataset=dataset, use_dummy=use_dummy, return_details=True)
+    entry = {
+        "dataset": dataset,
+        "config": cfg,
+        **res,
+    }
+    TIMING_LOG.parent.mkdir(exist_ok=True)
+    with TIMING_LOG.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(entry) + "\n")
     return (-res["ndcg"], res["latency_ms"])
 
 
