@@ -14,16 +14,16 @@ from rag_pipeline.pipeline import evaluate_config
 
 # hardcoded params (style inherited from just_example.py)
 MY_SEED = 42
-POP_COUNT = 8
-GENERATIONS = 1  # single generation as requested
+POP_COUNT = 12
+GENERATIONS = 4
 RANDOM_TRIALS = 0  # disable random search
 CROSS_PROB = 0.9
 MUT_PROB = 0.15
 DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
 USE_DUMMY = False  # set False on the Linux server for real metrics
-WORKERS = 1  # keep single process to avoid GPU contention/cuda launch issues
-BOHB_TRIALS = 15
+WORKERS = 1
+BOHB_TRIALS = 30
 TIMING_LOG = Path("artifacts/timings.log")
 
 
