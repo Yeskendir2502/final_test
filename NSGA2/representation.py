@@ -8,7 +8,7 @@ Chromosome representation and genetic operators for the RAG config space.
 import random
 from typing import List, Dict, Any
 
-from config_space import CONFIG_SPACE, GENE_ORDER
+from NSGA2.config_space import CONFIG_SPACE, GENE_ORDER
 
 
 Chromosome = List[int]

@@ -13,14 +13,14 @@ from rag_pipeline.pipeline import evaluate_config
 
 # hardcoded params (style inherited from just_example.py)
 MY_SEED = 42
-POP_COUNT = 24
-GENERATIONS = 6
-RANDOM_TRIALS = 8
+POP_COUNT = 8
+GENERATIONS = 1  # single generation as requested
+RANDOM_TRIALS = 0  # disable random search
 CROSS_PROB = 0.9
 MUT_PROB = 0.15
 DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
-USE_DUMMY = True  # set False on the Linux server for real metrics
+USE_DUMMY = False  # set False on the Linux server for real metrics
 
 
 def set_seeds(seed: int):
@@ -99,10 +99,6 @@ def run_grid(dataset: str):
 def main():
     set_seeds(MY_SEED)
     for ds in DATASETS:
-        print(f"=== DATASET {ds} :: grid ===")
-        run_grid(ds)
-        print(f"=== DATASET {ds} :: random ===")
-        run_random(ds)
         print(f"=== DATASET {ds} :: nsga2 ===")
         run_nsga(ds)
     print("Done.")
