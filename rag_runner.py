@@ -22,7 +22,8 @@ MUT_PROB = 0.15
 DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
 USE_DUMMY = False  # set False on the Linux server for real metrics
-WORKERS = max(1, (os.cpu_count() or 1) - 1)
+WORKERS = 1  # keep single process to avoid GPU contention/cuda launch issues
+BOHB_TRIALS = 15
 TIMING_LOG = Path("artifacts/timings.log")
 
 
@@ -86,6 +87,11 @@ def run_random(dataset: str):
     opt.run_random_search(trials=RANDOM_TRIALS, dataset=dataset, use_dummy=USE_DUMMY)
 
 
+def run_bohb(dataset: str):
+    opt = ConfigOptimizer(dataset=dataset, use_dummy=USE_DUMMY)
+    opt.run_bohb_optimize(trials=BOHB_TRIALS, dataset=dataset, use_dummy=USE_DUMMY)
+
+
 def run_grid(dataset: str):
     base_cfg = {
         "splitter_type": "token",
@@ -117,6 +123,8 @@ def main():
     for ds in DATASETS:
         print(f"=== DATASET {ds} :: nsga2 ===")
         run_nsga(ds)
+        print(f"=== DATASET {ds} :: bohb ===")
+        run_bohb(ds)
     print("Done.")
 
 
