@@ -1,6 +1,7 @@
 import json
 import math
 import random
+import os
 from pathlib import Path
 
 import numpy as np
@@ -21,6 +22,14 @@ MUT_PROB = 0.15
 DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
 USE_DUMMY = False  # set False on the Linux server for real metrics
+WORKERS = max(1, (os.cpu_count() or 1) - 1)
+
+
+def eval_chromosome(chromosome, dataset, use_dummy, embed_models):
+    cfg = flatten_cfg(decode_chromosome(chromosome))
+    cfg["embedding_model"] = random.choice(embed_models)
+    res = evaluate_config(cfg, dataset=dataset, use_dummy=use_dummy, return_details=True)
+    return (-res["ndcg"], res["latency_ms"])
 
 
 def set_seeds(seed: int):
@@ -45,19 +54,17 @@ def flatten_cfg(cfg):
 
 
 def run_nsga(dataset: str):
-    def eval_fn(chromosome):
-        cfg = flatten_cfg(decode_chromosome(chromosome))
-        cfg["embedding_model"] = random.choice(EMBED_MODELS)
-        res = evaluate_config(cfg, dataset=dataset, use_dummy=USE_DUMMY, return_details=True)
-        return (-res["ndcg"], res["latency_ms"])
+    from functools import partial
 
+    fn = partial(eval_chromosome, dataset=dataset, use_dummy=USE_DUMMY, embed_models=EMBED_MODELS)
     pareto, pf_fit, _, _ = run_nsga2(
-        eval_fn=eval_fn,
+        eval_fn=fn,
         pop_size=POP_COUNT,
         n_generations=GENERATIONS,
         crossover_prob=CROSS_PROB,
         mutation_prob=MUT_PROB,
         seed=MY_SEED,
+        workers=WORKERS,
     )
     out_dir = Path("artifacts")
     out_dir.mkdir(exist_ok=True)

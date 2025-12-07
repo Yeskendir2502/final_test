@@ -379,6 +379,8 @@ class RAGEvaluator:
             embeddings = cached.embeddings
             index = cached.index
             cache_hit = True
+            if index is None and not self.use_dummy:
+                index = self._build_index(embeddings, config)
         else:
             # Chunk corpus
             chunk_texts: List[str] = []

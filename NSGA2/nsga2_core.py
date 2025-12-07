@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import math
 import random
+import multiprocessing.pool
 from typing import Callable, List, Tuple
 
 from NSGA2.representation import (
@@ -153,6 +154,7 @@ def run_nsga2(
     crossover_prob: float = 0.9,
     mutation_prob: float = 0.1,
     seed: int | None = None,
+    workers: int | None = None,
 ):
     """
     Main NSGA-II loop.
@@ -168,7 +170,11 @@ def run_nsga2(
     population: List[Chromosome] = [
         random_chromosome() for _ in range(pop_size)
     ]
-    fitnesses: List[Fitness] = [eval_fn(ind) for ind in population]
+    if workers and workers > 1:
+        with multiprocessing.pool.Pool(processes=workers) as pool:
+            fitnesses = pool.map(eval_fn, population)
+    else:
+        fitnesses = [eval_fn(ind) for ind in population]
 
     for gen in range(n_generations):
         # --- Rank & crowding for current population ---
@@ -199,9 +205,11 @@ def run_nsga2(
             if len(offspring) < pop_size:
                 offspring.append(child2)
 
-        offspring_fitnesses: List[Fitness] = [
-            eval_fn(ind) for ind in offspring
-        ]
+        if workers and workers > 1:
+            with multiprocessing.pool.Pool(processes=workers) as pool:
+                offspring_fitnesses = pool.map(eval_fn, offspring)
+        else:
+            offspring_fitnesses = [eval_fn(ind) for ind in offspring]
 
         # --- Combine parents & offspring (elitism) ---
         combined = population + offspring
