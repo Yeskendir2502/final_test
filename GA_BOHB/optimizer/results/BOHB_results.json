@@ -1,1 +1,5901 @@
-[]
+[
+  {
+    "trial_id": 0,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 50,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.16231882870459777,
+    "latency": 843894.5648670197
+  },
+  {
+    "trial_id": 1,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.13341010463693537,
+    "latency": 875383.6419582367
+  },
+  {
+    "trial_id": 2,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 512,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 100,
+      "top_k": 50,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1594570374845497,
+    "latency": 830090.3470516205
+  },
+  {
+    "trial_id": 3,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.16610778683490357,
+    "latency": 906898.065328598
+  },
+  {
+    "trial_id": 4,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 100,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1364299163610932,
+    "latency": 840007.6625347137
+  },
+  {
+    "trial_id": 5,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.29717397140191015,
+    "latency": 4765.908241271973
+  },
+  {
+    "trial_id": 6,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.4948195781942216,
+    "latency": 4515.350103378296
+  },
+  {
+    "trial_id": 7,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.15948396544299706,
+    "latency": 814850.3890037537
+  },
+  {
+    "trial_id": 8,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.11826429894622724,
+    "latency": 890730.9873104095
+  },
+  {
+    "trial_id": 9,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3311082321806231,
+    "latency": 3206.3801288604736
+  },
+  {
+    "trial_id": 10,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3998.576879501343
+  },
+  {
+    "trial_id": 11,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3506.960868835449
+  },
+  {
+    "trial_id": 12,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3419.2800521850586
+  },
+  {
+    "trial_id": 13,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3423.025131225586
+  },
+  {
+    "trial_id": 14,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.1564113806220566,
+    "latency": 847735.92710495
+  },
+  {
+    "trial_id": 15,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 50,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.456182411939917,
+    "latency": 3730.6551933288574
+  },
+  {
+    "trial_id": 16,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3472.6130962371826
+  },
+  {
+    "trial_id": 17,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3511.4593505859375
+  },
+  {
+    "trial_id": 18,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 30,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.1490940239758824,
+    "latency": 834568.6283111572
+  },
+  {
+    "trial_id": 19,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 50,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.4987788189982705,
+    "latency": 6298.852443695068
+  },
+  {
+    "trial_id": 20,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.4573184738715731,
+    "latency": 3799.365282058716
+  },
+  {
+    "trial_id": 21,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3311082321806231,
+    "latency": 5651.254415512085
+  },
+  {
+    "trial_id": 22,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3311082321806231,
+    "latency": 4978.923082351685
+  },
+  {
+    "trial_id": 23,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.26704902473631575,
+    "latency": 4449.896812438965
+  },
+  {
+    "trial_id": 24,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 4224.021434783936
+  },
+  {
+    "trial_id": 25,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3311082321806231,
+    "latency": 3772.9148864746094
+  },
+  {
+    "trial_id": 26,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.1564113806220566,
+    "latency": 808586.7936611176
+  },
+  {
+    "trial_id": 27,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.15657838439225455,
+    "latency": 810414.9858951569
+  },
+  {
+    "trial_id": 28,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "IVF",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.16232803432417603,
+    "latency": 1069629.9452781677
+  },
+  {
+    "trial_id": 29,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 50,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.15882991893982046,
+    "latency": 840694.2522525787
+  },
+  {
+    "trial_id": 30,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.14236161487273757,
+    "latency": 3666.433811187744
+  },
+  {
+    "trial_id": 31,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3855.396270751953
+  },
+  {
+    "trial_id": 32,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3536.620855331421
+  },
+  {
+    "trial_id": 33,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3727.564573287964
+  },
+  {
+    "trial_id": 34,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 30,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.1538784702586032,
+    "latency": 838653.9070606232
+  },
+  {
+    "trial_id": 35,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35881502282837535,
+    "latency": 3379.976987838745
+  },
+  {
+    "trial_id": 36,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1364299163610932,
+    "latency": 836936.8963241577
+  },
+  {
+    "trial_id": 37,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3702273135312742,
+    "latency": 3989.603042602539
+  },
+  {
+    "trial_id": 38,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.15970471604027686,
+    "latency": 843579.4441699982
+  },
+  {
+    "trial_id": 39,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 30,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.30416010461074106,
+    "latency": 3567.4846172332764
+  },
+  {
+    "trial_id": 40,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.16231882870459777,
+    "latency": 838720.0627326965
+  },
+  {
+    "trial_id": 41,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3450.896978378296
+  },
+  {
+    "trial_id": 42,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3344.295024871826
+  },
+  {
+    "trial_id": 43,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3423.3553409576416
+  },
+  {
+    "trial_id": 44,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45620096202343335,
+    "latency": 3591.743230819702
+  },
+  {
+    "trial_id": 45,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.4985997594281273,
+    "latency": 5529.8192501068115
+  },
+  {
+    "trial_id": 46,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.1564113806220566,
+    "latency": 837108.4749698639
+  },
+  {
+    "trial_id": 47,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3079699427328258,
+    "latency": 3528.7864208221436
+  },
+  {
+    "trial_id": 48,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 50,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.456182411939917,
+    "latency": 3862.438440322876
+  },
+  {
+    "trial_id": 49,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.1586945673050994,
+    "latency": 840242.3253059387
+  },
+  {
+    "trial_id": 50,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 30,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.456182411939917,
+    "latency": 3897.205591201782
+  },
+  {
+    "trial_id": 51,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45460519212305533,
+    "latency": 3502.3765563964844
+  },
+  {
+    "trial_id": 52,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.4578064027071299,
+    "latency": 3605.769395828247
+  },
+  {
+    "trial_id": 53,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.32953669972221755,
+    "latency": 3148.7746238708496
+  },
+  {
+    "trial_id": 54,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 3469.8996543884277
+  },
+  {
+    "trial_id": 55,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.32953669972221755,
+    "latency": 3207.6005935668945
+  },
+  {
+    "trial_id": 56,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.1539113879096448,
+    "latency": 816123.5644817352
+  },
+  {
+    "trial_id": 57,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45888403190027,
+    "latency": 5258.445739746094
+  },
+  {
+    "trial_id": 58,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45804266943642297,
+    "latency": 4990.885972976685
+  },
+  {
+    "trial_id": 59,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3576056738258648,
+    "latency": 3393.984079360962
+  },
+  {
+    "trial_id": 60,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.45706901240930653,
+    "latency": 4220.276355743408
+  },
+  {
+    "trial_id": 61,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3311082321806231,
+    "latency": 3514.1305923461914
+  },
+  {
+    "trial_id": 62,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.32953669972221755,
+    "latency": 3323.658227920532
+  },
+  {
+    "trial_id": 63,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3311082321806231,
+    "latency": 3704.6310901641846
+  },
+  {
+    "trial_id": 64,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.33347388994382277,
+    "latency": 3209.9056243896484
+  },
+  {
+    "trial_id": 65,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36510589807858623,
+    "latency": 3167.172908782959
+  },
+  {
+    "trial_id": 66,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.33404248141095355,
+    "latency": 3477.842330932617
+  },
+  {
+    "trial_id": 67,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1364299163610932,
+    "latency": 883657.6471328735
+  },
+  {
+    "trial_id": 68,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.13916724604700983,
+    "latency": 1050242.4142360687
+  },
+  {
+    "trial_id": 69,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.49380541130011335,
+    "latency": 3549.8404502868652
+  },
+  {
+    "trial_id": 70,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 50,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.15864082638827406,
+    "latency": 831575.0448703766
+  },
+  {
+    "trial_id": 71,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.33347388994382277,
+    "latency": 3137.4998092651367
+  },
+  {
+    "trial_id": 72,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 5,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.33347388994382277,
+    "latency": 3100.5706787109375
+  },
+  {
+    "trial_id": 73,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36510589807858623,
+    "latency": 3072.265625
+  },
+  {
+    "trial_id": 74,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36510589807858623,
+    "latency": 3436.836004257202
+  },
+  {
+    "trial_id": 75,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3700573325741531,
+    "latency": 3860.3978157043457
+  },
+  {
+    "trial_id": 76,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36510589807858623,
+    "latency": 3232.1488857269287
+  },
+  {
+    "trial_id": 77,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36492614434134324,
+    "latency": 3521.6355323791504
+  },
+  {
+    "trial_id": 78,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3113.4703159332275
+  },
+  {
+    "trial_id": 79,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3126.309633255005
+  },
+  {
+    "trial_id": 80,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.23357064487881932,
+    "latency": 3073.829412460327
+  },
+  {
+    "trial_id": 81,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3115.1931285858154
+  },
+  {
+    "trial_id": 82,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3189.011335372925
+  },
+  {
+    "trial_id": 83,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3160.2118015289307
+  },
+  {
+    "trial_id": 84,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3143.61310005188
+  },
+  {
+    "trial_id": 85,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1364299163610932,
+    "latency": 850997.6541996002
+  },
+  {
+    "trial_id": 86,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3626696056193943,
+    "latency": 3132.9290866851807
+  },
+  {
+    "trial_id": 87,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.37401818589657576,
+    "latency": 3168.3433055877686
+  },
+  {
+    "trial_id": 88,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3666706736191481,
+    "latency": 3220.9632396698
+  },
+  {
+    "trial_id": 89,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.1334459565573194,
+    "latency": 887603.7020683289
+  },
+  {
+    "trial_id": 90,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3761006445454722,
+    "latency": 4003.7167072296143
+  },
+  {
+    "trial_id": 91,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.37401818589657576,
+    "latency": 3329.1878700256348
+  },
+  {
+    "trial_id": 92,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.37401818589657576,
+    "latency": 3314.565658569336
+  },
+  {
+    "trial_id": 93,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3626696056193943,
+    "latency": 3258.5089206695557
+  },
+  {
+    "trial_id": 94,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3626696056193943,
+    "latency": 3333.0934047698975
+  },
+  {
+    "trial_id": 95,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.14178310772712813,
+    "latency": 845836.2431526184
+  },
+  {
+    "trial_id": 96,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3626696056193943,
+    "latency": 3187.4141693115234
+  },
+  {
+    "trial_id": 97,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3641374872462158,
+    "latency": 3232.2030067443848
+  },
+  {
+    "trial_id": 98,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3148.8749980926514
+  },
+  {
+    "trial_id": 99,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.22739070285507107,
+    "latency": 3102.5071144104004
+  },
+  {
+    "trial_id": 100,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3189.777135848999
+  },
+  {
+    "trial_id": 101,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3868.0388927459717
+  },
+  {
+    "trial_id": 102,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3273.449182510376
+  },
+  {
+    "trial_id": 103,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3679.5151233673096
+  },
+  {
+    "trial_id": 104,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3310.87064743042
+  },
+  {
+    "trial_id": 105,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3332.571506500244
+  },
+  {
+    "trial_id": 106,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36422633347563205,
+    "latency": 3760.1258754730225
+  },
+  {
+    "trial_id": 107,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1364299163610932,
+    "latency": 870766.5059566498
+  },
+  {
+    "trial_id": 108,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.290639303255803,
+    "latency": 4110.410451889038
+  },
+  {
+    "trial_id": 109,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3631391768283248,
+    "latency": 3391.3018703460693
+  },
+  {
+    "trial_id": 110,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 50,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.13936137886236388,
+    "latency": 865005.4821968079
+  },
+  {
+    "trial_id": 111,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3195.528745651245
+  },
+  {
+    "trial_id": 112,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3449.8653411865234
+  },
+  {
+    "trial_id": 113,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3099.257469177246
+  },
+  {
+    "trial_id": 114,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3055.565595626831
+  },
+  {
+    "trial_id": 115,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3600.2516746520996
+  },
+  {
+    "trial_id": 116,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.14178310772712813,
+    "latency": 871334.1159820557
+  },
+  {
+    "trial_id": 117,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3189.0389919281006
+  },
+  {
+    "trial_id": 118,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3135.371208190918
+  },
+  {
+    "trial_id": 119,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3088.815212249756
+  },
+  {
+    "trial_id": 120,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.23367245201670966,
+    "latency": 2981.9366931915283
+  },
+  {
+    "trial_id": 121,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3486.7563247680664
+  },
+  {
+    "trial_id": 122,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3305.3629398345947
+  },
+  {
+    "trial_id": 123,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3056.19740486145
+  },
+  {
+    "trial_id": 124,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3113.3508682250977
+  },
+  {
+    "trial_id": 125,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3167.4094200134277
+  },
+  {
+    "trial_id": 126,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3142.137050628662
+  },
+  {
+    "trial_id": 127,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3486.5453243255615
+  },
+  {
+    "trial_id": 128,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3131.0930252075195
+  },
+  {
+    "trial_id": 129,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1256480043510781,
+    "latency": 960357.4025630951
+  },
+  {
+    "trial_id": 130,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36131647312562654,
+    "latency": 3148.967504501343
+  },
+  {
+    "trial_id": 131,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3201.6241550445557
+  },
+  {
+    "trial_id": 132,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3178.976535797119
+  },
+  {
+    "trial_id": 133,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3538.483142852783
+  },
+  {
+    "trial_id": 134,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3527.806520462036
+  },
+  {
+    "trial_id": 135,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3086.2057209014893
+  },
+  {
+    "trial_id": 136,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3444.021224975586
+  },
+  {
+    "trial_id": 137,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35686352485017014,
+    "latency": 3480.7329177856445
+  },
+  {
+    "trial_id": 138,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3106.963634490967
+  },
+  {
+    "trial_id": 139,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.1284398376898915,
+    "latency": 930433.3968162537
+  },
+  {
+    "trial_id": 140,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3925.6088733673096
+  },
+  {
+    "trial_id": 141,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3470.834493637085
+  },
+  {
+    "trial_id": 142,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3093.6386585235596
+  },
+  {
+    "trial_id": 143,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3143.7106132507324
+  },
+  {
+    "trial_id": 144,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3117.6533699035645
+  },
+  {
+    "trial_id": 145,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3015.5797004699707
+  },
+  {
+    "trial_id": 146,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.15684305295231962,
+    "latency": 869232.4175834656
+  },
+  {
+    "trial_id": 147,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3219.5215225219727
+  },
+  {
+    "trial_id": 148,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3033.939838409424
+  },
+  {
+    "trial_id": 149,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.21707528328284076,
+    "latency": 3344.3636894226074
+  },
+  {
+    "trial_id": 150,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3042.6764488220215
+  },
+  {
+    "trial_id": 151,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3405.4973125457764
+  },
+  {
+    "trial_id": 152,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3454.4625282287598
+  },
+  {
+    "trial_id": 153,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3267.5998210906982
+  },
+  {
+    "trial_id": 154,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3392.164945602417
+  },
+  {
+    "trial_id": 155,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3105.7498455047607
+  },
+  {
+    "trial_id": 156,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.28750192511972067,
+    "latency": 3371.9444274902344
+  },
+  {
+    "trial_id": 157,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3103.9676666259766
+  },
+  {
+    "trial_id": 158,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3138.6473178863525
+  },
+  {
+    "trial_id": 159,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3087.454080581665
+  },
+  {
+    "trial_id": 160,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.15882991893982046,
+    "latency": 848393.7647342682
+  },
+  {
+    "trial_id": 161,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3786.588191986084
+  },
+  {
+    "trial_id": 162,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3215.947389602661
+  },
+  {
+    "trial_id": 163,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3363.3193969726562
+  },
+  {
+    "trial_id": 164,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3610.954999923706
+  },
+  {
+    "trial_id": 165,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3380.185842514038
+  },
+  {
+    "trial_id": 166,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35691644559726593,
+    "latency": 3265.941381454468
+  },
+  {
+    "trial_id": 167,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3168.5144901275635
+  },
+  {
+    "trial_id": 168,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3668299270764025,
+    "latency": 4037.482976913452
+  },
+  {
+    "trial_id": 169,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3380.7637691497803
+  },
+  {
+    "trial_id": 170,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.1589737379916244,
+    "latency": 865302.3290634155
+  },
+  {
+    "trial_id": 171,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3645.3328132629395
+  },
+  {
+    "trial_id": 172,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3209.911108016968
+  },
+  {
+    "trial_id": 173,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3559.622049331665
+  },
+  {
+    "trial_id": 174,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3153.432607650757
+  },
+  {
+    "trial_id": 175,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3565.6983852386475
+  },
+  {
+    "trial_id": 176,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3581.028699874878
+  },
+  {
+    "trial_id": 177,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3974.067211151123
+  },
+  {
+    "trial_id": 178,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3520.3027725219727
+  },
+  {
+    "trial_id": 179,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3563.8837814331055
+  },
+  {
+    "trial_id": 180,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.15085600911176336,
+    "latency": 839985.4793548584
+  },
+  {
+    "trial_id": 181,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3335.8919620513916
+  },
+  {
+    "trial_id": 182,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.362340389555294,
+    "latency": 3148.267984390259
+  },
+  {
+    "trial_id": 183,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3089.7815227508545
+  },
+  {
+    "trial_id": 184,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3085.829496383667
+  },
+  {
+    "trial_id": 185,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3187.9537105560303
+  },
+  {
+    "trial_id": 186,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 2999.6132850646973
+  },
+  {
+    "trial_id": 187,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3000.45108795166
+  },
+  {
+    "trial_id": 188,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3766.685724258423
+  },
+  {
+    "trial_id": 189,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3248.645544052124
+  },
+  {
+    "trial_id": 190,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3346.651554107666
+  },
+  {
+    "trial_id": 191,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3322.136402130127
+  },
+  {
+    "trial_id": 192,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3362.6158237457275
+  },
+  {
+    "trial_id": 193,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3384.5341205596924
+  },
+  {
+    "trial_id": 194,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3334.7668647766113
+  },
+  {
+    "trial_id": 195,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3399.409055709839
+  },
+  {
+    "trial_id": 196,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3308.6769580841064
+  },
+  {
+    "trial_id": 197,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35780559989664384,
+    "latency": 3672.1112728118896
+  },
+  {
+    "trial_id": 198,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1256480043510781,
+    "latency": 902541.2352085114
+  },
+  {
+    "trial_id": 199,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3129.4846534729004
+  },
+  {
+    "trial_id": 200,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3676509056496452,
+    "latency": 3944.7476863861084
+  },
+  {
+    "trial_id": 201,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3462.3725414276123
+  },
+  {
+    "trial_id": 202,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3114.9935722351074
+  },
+  {
+    "trial_id": 203,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3147.3333835601807
+  },
+  {
+    "trial_id": 204,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3112.1561527252197
+  },
+  {
+    "trial_id": 205,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3168.4203147888184
+  },
+  {
+    "trial_id": 206,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3471.954107284546
+  },
+  {
+    "trial_id": 207,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3605096913837458,
+    "latency": 3561.023235321045
+  },
+  {
+    "trial_id": 208,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.362340389555294,
+    "latency": 3130.916118621826
+  },
+  {
+    "trial_id": 209,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3100.249767303467
+  },
+  {
+    "trial_id": 210,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3605096913837458,
+    "latency": 3154.8540592193604
+  },
+  {
+    "trial_id": 211,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3457.531452178955
+  },
+  {
+    "trial_id": 212,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3430.501937866211
+  },
+  {
+    "trial_id": 213,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 4114.371538162231
+  },
+  {
+    "trial_id": 214,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3570.706844329834
+  },
+  {
+    "trial_id": 215,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.15962031700736726,
+    "latency": 834759.3257427216
+  },
+  {
+    "trial_id": 216,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3261.413812637329
+  },
+  {
+    "trial_id": 217,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.28405508695564147,
+    "latency": 3320.8210468292236
+  },
+  {
+    "trial_id": 218,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.15684305295231962,
+    "latency": 848852.5950908661
+  },
+  {
+    "trial_id": 219,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.23367245201670966,
+    "latency": 3378.7708282470703
+  },
+  {
+    "trial_id": 220,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3342.797040939331
+  },
+  {
+    "trial_id": 221,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3435.6372356414795
+  },
+  {
+    "trial_id": 222,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3819.25630569458
+  },
+  {
+    "trial_id": 223,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3552.5426864624023
+  },
+  {
+    "trial_id": 224,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3544.044017791748
+  },
+  {
+    "trial_id": 225,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3371.06990814209
+  },
+  {
+    "trial_id": 226,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36390363457419633,
+    "latency": 3461.6098403930664
+  },
+  {
+    "trial_id": 227,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.362340389555294,
+    "latency": 3420.243263244629
+  },
+  {
+    "trial_id": 228,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3765.420436859131
+  },
+  {
+    "trial_id": 229,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3605096913837458,
+    "latency": 3351.0782718658447
+  },
+  {
+    "trial_id": 230,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.37330687074889146,
+    "latency": 3475.9628772735596
+  },
+  {
+    "trial_id": 231,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3390.7828330993652
+  },
+  {
+    "trial_id": 232,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3423.2945442199707
+  },
+  {
+    "trial_id": 233,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3390.8331394195557
+  },
+  {
+    "trial_id": 234,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3458.737373352051
+  },
+  {
+    "trial_id": 235,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3353.027105331421
+  },
+  {
+    "trial_id": 236,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3286.029100418091
+  },
+  {
+    "trial_id": 237,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35911132645584093,
+    "latency": 3387.728214263916
+  },
+  {
+    "trial_id": 238,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3586964704750686,
+    "latency": 3567.688465118408
+  },
+  {
+    "trial_id": 239,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.362340389555294,
+    "latency": 3651.6733169555664
+  },
+  {
+    "trial_id": 240,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3602.8032302856445
+  },
+  {
+    "trial_id": 241,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 4021.3842391967773
+  },
+  {
+    "trial_id": 242,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3656.6338539123535
+  },
+  {
+    "trial_id": 243,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3575.1163959503174
+  },
+  {
+    "trial_id": 244,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1256480043510781,
+    "latency": 939355.5362224579
+  },
+  {
+    "trial_id": 245,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3668299270764025,
+    "latency": 4038.8097763061523
+  },
+  {
+    "trial_id": 246,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3323.981523513794
+  },
+  {
+    "trial_id": 247,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.362340389555294,
+    "latency": 3251.909017562866
+  },
+  {
+    "trial_id": 248,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3593549401948727,
+    "latency": 3269.0212726593018
+  },
+  {
+    "trial_id": 249,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3314.6467208862305
+  },
+  {
+    "trial_id": 250,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3373.164653778076
+  },
+  {
+    "trial_id": 251,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36434972226913137,
+    "latency": 3311.603784561157
+  },
+  {
+    "trial_id": 252,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3605600323203164,
+    "latency": 3420.0098514556885
+  },
+  {
+    "trial_id": 253,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.12761464813765677,
+    "latency": 903565.6309127808
+  },
+  {
+    "trial_id": 254,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.2922076865871134,
+    "latency": 4390.225172042847
+  },
+  {
+    "trial_id": 255,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.15684305295231962,
+    "latency": 853463.1807804108
+  },
+  {
+    "trial_id": 256,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3651188383355687,
+    "latency": 3440.7336711883545
+  },
+  {
+    "trial_id": 257,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3282.9630374908447
+  },
+  {
+    "trial_id": 258,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3316.833734512329
+  },
+  {
+    "trial_id": 259,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.37400773221968825,
+    "latency": 3840.1880264282227
+  },
+  {
+    "trial_id": 260,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3467.9205417633057
+  },
+  {
+    "trial_id": 261,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35908142277699606,
+    "latency": 3714.494228363037
+  },
+  {
+    "trial_id": 262,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3307.594060897827
+  },
+  {
+    "trial_id": 263,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35780559989664384,
+    "latency": 3849.773406982422
+  },
+  {
+    "trial_id": 264,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36390363457419633,
+    "latency": 3329.345941543579
+  },
+  {
+    "trial_id": 265,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.34893976565797985,
+    "latency": 3365.4284477233887
+  },
+  {
+    "trial_id": 266,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3676509056496452,
+    "latency": 4055.4721355438232
+  },
+  {
+    "trial_id": 267,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3285.2821350097656
+  },
+  {
+    "trial_id": 268,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.15882991893982046,
+    "latency": 848569.5884227753
+  },
+  {
+    "trial_id": 269,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3866.6186332702637
+  },
+  {
+    "trial_id": 270,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3617260545981297,
+    "latency": 3341.099262237549
+  },
+  {
+    "trial_id": 271,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3600636036888108,
+    "latency": 3292.080879211426
+  },
+  {
+    "trial_id": 272,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.2922076865871134,
+    "latency": 3866.1890029907227
+  },
+  {
+    "trial_id": 273,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3760.8935832977295
+  },
+  {
+    "trial_id": 274,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35908142277699606,
+    "latency": 3359.391450881958
+  },
+  {
+    "trial_id": 275,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.23367245201670966,
+    "latency": 3290.225028991699
+  },
+  {
+    "trial_id": 276,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3714.268207550049
+  },
+  {
+    "trial_id": 277,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.1284326294130281,
+    "latency": 918781.884431839
+  },
+  {
+    "trial_id": 278,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3626476158953109,
+    "latency": 3520.322561264038
+  },
+  {
+    "trial_id": 279,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.11890872012019545,
+    "latency": 936108.9017391205
+  },
+  {
+    "trial_id": 280,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 4081.5978050231934
+  },
+  {
+    "trial_id": 281,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35772714213079637,
+    "latency": 3417.2565937042236
+  },
+  {
+    "trial_id": 282,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35332640910113394,
+    "latency": 3437.243938446045
+  },
+  {
+    "trial_id": 283,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3718.1875705718994
+  },
+  {
+    "trial_id": 284,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3593549401948727,
+    "latency": 3580.6798934936523
+  },
+  {
+    "trial_id": 285,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35780559989664384,
+    "latency": 3587.7745151519775
+  },
+  {
+    "trial_id": 286,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35765836497704384,
+    "latency": 3952.7852535247803
+  },
+  {
+    "trial_id": 287,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.362340389555294,
+    "latency": 3969.121217727661
+  },
+  {
+    "trial_id": 288,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36237409847743435,
+    "latency": 3560.9703063964844
+  },
+  {
+    "trial_id": 289,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3676509056496452,
+    "latency": 4248.631954193115
+  },
+  {
+    "trial_id": 290,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3563938830303947,
+    "latency": 3492.1109676361084
+  },
+  {
+    "trial_id": 291,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3611115722002372,
+    "latency": 3863.070249557495
+  },
+  {
+    "trial_id": 292,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1256480043510781,
+    "latency": 936901.2212753296
+  },
+  {
+    "trial_id": 293,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3609313287408001,
+    "latency": 3817.084312438965
+  },
+  {
+    "trial_id": 294,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.2749255090867404,
+    "latency": 4105.699300765991
+  },
+  {
+    "trial_id": 295,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3518.658399581909
+  },
+  {
+    "trial_id": 296,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3595.451831817627
+  },
+  {
+    "trial_id": 297,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.48651031783723686,
+    "latency": 4361.6766929626465
+  },
+  {
+    "trial_id": 298,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.21707528328284076,
+    "latency": 3272.934913635254
+  },
+  {
+    "trial_id": 299,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3515346192061694,
+    "latency": 3353.377103805542
+  },
+  {
+    "trial_id": 300,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3377.1286010742188
+  },
+  {
+    "trial_id": 301,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.16130462182964486,
+    "latency": 867434.5545768738
+  },
+  {
+    "trial_id": 302,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3333.071708679199
+  },
+  {
+    "trial_id": 303,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3645639843536031,
+    "latency": 3149.5609283447266
+  },
+  {
+    "trial_id": 304,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.15827785096771288,
+    "latency": 840106.2099933624
+  },
+  {
+    "trial_id": 305,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3499.9470710754395
+  },
+  {
+    "trial_id": 306,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 384,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.355988445791685,
+    "latency": 3672.6536750793457
+  },
+  {
+    "trial_id": 307,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36006371818348576,
+    "latency": 3267.9831981658936
+  },
+  {
+    "trial_id": 308,
+    "config": {
+      "splitter_type": "paragraph",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3537385426182963,
+    "latency": 3324.892282485962
+  },
+  {
+    "trial_id": 309,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3540390255037627,
+    "latency": 3282.0417881011963
+  },
+  {
+    "trial_id": 310,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.361034662996097,
+    "latency": 3347.8217124938965
+  },
+  {
+    "trial_id": 311,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36889131029633987,
+    "latency": 4196.669578552246
+  },
+  {
+    "trial_id": 312,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3605096913837458,
+    "latency": 3518.14866065979
+  },
+  {
+    "trial_id": 313,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 100,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3628317606870188,
+    "latency": 3399.1148471832275
+  },
+  {
+    "trial_id": 314,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36325825779440607,
+    "latency": 3504.2030811309814
+  },
+  {
+    "trial_id": 315,
+    "config": {
+      "splitter_type": "token",
+      "chunk_size": 512,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35593502472902105,
+    "latency": 3781.827926635742
+  },
+  {
+    "trial_id": 316,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36773290837968975,
+    "latency": 3104.719400405884
+  },
+  {
+    "trial_id": 317,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 50,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.29686618000547726,
+    "latency": 3945.8158016204834
+  },
+  {
+    "trial_id": 318,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1388992235347876,
+    "latency": 875143.4781551361
+  },
+  {
+    "trial_id": 319,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36212684317032845,
+    "latency": 3685.5649948120117
+  },
+  {
+    "trial_id": 320,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": true,
+      "index_type": "IVF",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 150,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.33311113027707884,
+    "latency": 3501.1649131774902
+  },
+  {
+    "trial_id": 321,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 10,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36773290837968975,
+    "latency": 3073.467969894409
+  },
+  {
+    "trial_id": 322,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36835075247585936,
+    "latency": 3106.8203449249268
+  },
+  {
+    "trial_id": 323,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 512,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36212684317032845,
+    "latency": 3055.372714996338
+  },
+  {
+    "trial_id": 324,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36835075247585936,
+    "latency": 3029.6199321746826
+  },
+  {
+    "trial_id": 325,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 0,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.35869646707248404,
+    "latency": 3124.694585800171
+  },
+  {
+    "trial_id": 326,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.8
+    },
+    "nDCG": 0.14395086353986009,
+    "latency": 859401.1950492859
+  },
+  {
+    "trial_id": 327,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3101.1250019073486
+  },
+  {
+    "trial_id": 328,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": true,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36835075247585936,
+    "latency": 3470.1995849609375
+  },
+  {
+    "trial_id": 329,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3056.8649768829346
+  },
+  {
+    "trial_id": 330,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3052.8340339660645
+  },
+  {
+    "trial_id": 331,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3449.143409729004
+  },
+  {
+    "trial_id": 332,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 24,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.5
+    },
+    "nDCG": 0.13041042275921302,
+    "latency": 868704.3380737305
+  },
+  {
+    "trial_id": 333,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 384,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.36137717866122204,
+    "latency": 3144.932508468628
+  },
+  {
+    "trial_id": 334,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 16,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3620888830048269,
+    "latency": 3573.425769805908
+  },
+  {
+    "trial_id": 335,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3528.1004905700684
+  },
+  {
+    "trial_id": 336,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 30,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "Flat",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.37580705208531606,
+    "latency": 4220.125913619995
+  },
+  {
+    "trial_id": 337,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3165.459156036377
+  },
+  {
+    "trial_id": 338,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3200.700521469116
+  },
+  {
+    "trial_id": 339,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3143.1186199188232
+  },
+  {
+    "trial_id": 340,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3159.6693992614746
+  },
+  {
+    "trial_id": 341,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "mpnet",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.4941391379415626,
+    "latency": 3457.530975341797
+  },
+  {
+    "trial_id": 342,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3113.787889480591
+  },
+  {
+    "trial_id": 343,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "bge-base",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.2860123268717998,
+    "latency": 3383.5089206695557
+  },
+  {
+    "trial_id": 344,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3006.150007247925
+  },
+  {
+    "trial_id": 345,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 1.0
+    },
+    "nDCG": 0.1388992235347876,
+    "latency": 868581.6371440887
+  },
+  {
+    "trial_id": 346,
+    "config": {
+      "splitter_type": "sentence",
+      "chunk_size": 256,
+      "chunk_overlap": 50,
+      "embedding_model": "all-MiniLM-L6-v2",
+      "normalize_embeddings": false,
+      "index_type": "HNSW",
+      "hnsw_M": 32,
+      "hnsw_efSearch": 50,
+      "top_k": 20,
+      "hybrid_weight": 0.0
+    },
+    "nDCG": 0.3682665988240291,
+    "latency": 3178.884506225586
+  }
+]

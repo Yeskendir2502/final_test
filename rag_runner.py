@@ -16,8 +16,8 @@ from rag_pipeline.pipeline import evaluate_config
 
 
 MY_SEED = 42
-POP_COUNT = 12
-GENERATIONS = 4
+POP_COUNT = 30
+GENERATIONS = 18
 RANDOM_TRIALS = 0  # disable random search
 CROSS_PROB = 0.9
 MUT_PROB = 0.15
@@ -25,8 +25,8 @@ DATASETS = ["fiqa", "scifact"]
 EMBED_MODELS = ["all-MiniLM-L6-v2", "bge-base", "mpnet"]
 USE_DUMMY = False
 WORKERS = 1
-BOHB_TRIALS = 30
-TIMING_LOG = Path("artifacts/timings.log")
+BOHB_TRIALS = 425
+TIMING_LOG = Path("artifacts/timings_9dec.log")
 def eval_chromosome(chromosome, dataset, use_dummy, embed_models):
     cfg = flatten_cfg(decode_chromosome(chromosome))
     cfg["embedding_model"] = random.choice(embed_models)
